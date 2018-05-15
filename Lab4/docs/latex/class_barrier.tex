@@ -1,0 +1,107 @@
+\hypertarget{class_barrier}{}\section{Barrier Class Reference}
+\label{class_barrier}\index{Barrier@{Barrier}}
+
+
+{\ttfamily \#include $<$Barrier.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Wait} ()\hypertarget{class_barrier_a7de2afc6097b37c051d864bdf694c7e0}{}\label{class_barrier_a7de2afc6097b37c051d864bdf694c7e0}
+
+\item 
+<<<<<<< HEAD
+void \hyperlink{class_barrier_a48006684f962b312bc0391629e08ca23}{first\+Turnstile} ()
+\item 
+void \hyperlink{class_barrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}{final\+Turnstile} ()
+=======
+void \hyperlink{class_barrier_aa9fa4a2ce214b6a052ca9689fe4fa031}{First\+Phase} ()
+\item 
+void \hyperlink{class_barrier_ab2776cdecaf46b2c46e6a5ace63f30b4}{Second\+Phase} ()
+>>>>>>> 33dd8c88ace74443717560760d87d652b15be9f3
+\item 
+{\bfseries Barrier} (int count)\hypertarget{class_barrier_a68730c862911d37696957056595aa604}{}\label{class_barrier_a68730c862911d37696957056595aa604}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries count}\hypertarget{class_barrier_a261549fd3fc57eb5c4066c8188d25100}{}\label{class_barrier_a261549fd3fc57eb5c4066c8188d25100}
+
+\item 
+int {\bfseries n}\hypertarget{class_barrier_a7da307d8df6bd44ab4e804a94e0c80c2}{}\label{class_barrier_a7da307d8df6bd44ab4e804a94e0c80c2}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ {\bfseries mutex}\hypertarget{class_barrier_a256676c1a44ee4971333d2963998b556}{}\label{class_barrier_a256676c1a44ee4971333d2963998b556}
+
+\item 
+<<<<<<< HEAD
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ {\bfseries turn\+StileA}\hypertarget{class_barrier_a1dc3b91b9ef0966f3792689ad17f555a}{}\label{class_barrier_a1dc3b91b9ef0966f3792689ad17f555a}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ {\bfseries turn\+StileB}\hypertarget{class_barrier_ac982078845654123a6ad2a2dbb2346e2}{}\label{class_barrier_ac982078845654123a6ad2a2dbb2346e2}
+=======
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ {\bfseries barrierA}\hypertarget{class_barrier_ab0a31bf60cbafe8430035856ac1e3c9a}{}\label{class_barrier_ab0a31bf60cbafe8430035856ac1e3c9a}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ {\bfseries barrierB}\hypertarget{class_barrier_a4b20bcf00ca8a135089a766c4ff37035}{}\label{class_barrier_a4b20bcf00ca8a135089a766c4ff37035}
+>>>>>>> 33dd8c88ace74443717560760d87d652b15be9f3
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+<<<<<<< HEAD
+\+: Jake Murphy Smith \+: 26-\/03-\/2018 \+: signal.\+cpp  modified by\+: Jake Murphy Smith  modified time\+: 26-\/03-\/2018 \+: G\+NU G\+E\+N\+E\+R\+AL P\+U\+B\+L\+IC L\+I\+C\+E\+N\+SE
+
+Implementation(finally working) of a rendezvous with more than two threads. N threads much reach a certain point in the code (rendezvous), being controlled by a turnstile at two positions, before continuing 
+
+\subsection{Member Function Documentation}
+\index{Barrier@{Barrier}!final\+Turnstile@{final\+Turnstile}}
+\index{final\+Turnstile@{final\+Turnstile}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{final\+Turnstile()}{finalTurnstile()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::final\+Turnstile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_barrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}{}\label{class_barrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}
+final\+Turnstile stands as the final block, and once released indicates that all threads have successfully executed the code, and the first\+Turnstile has been reset \index{Barrier@{Barrier}!first\+Turnstile@{first\+Turnstile}}
+\index{first\+Turnstile@{first\+Turnstile}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{first\+Turnstile()}{firstTurnstile()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::first\+Turnstile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_barrier_a48006684f962b312bc0391629e08ca23}{}\label{class_barrier_a48006684f962b312bc0391629e08ca23}
+\+: Jake Murphy Smith \+: 26-\/03-\/2018 \+: signal.\+cpp  modified by\+: Jake Murphy Smith  modified time\+: 26-\/03-\/2018 \+: G\+NU G\+E\+N\+E\+R\+AL P\+U\+B\+L\+IC L\+I\+C\+E\+N\+SE
+
+Orginally one block, however logic was getting too annoying to follow partitioned out to smaller chunks
+
+first\+Turnstile stands as the first block that the thread\+Pool will reach and be held at until all have arrived 
+=======
+author\+: Jake Murphy Smith date\+: 29/10/2017 task\+: to create a barrier class version\+: 1.\+0
+
+Class used to implement a rendezvous with more than two threads, meaning N threads will have to reach a certain point (rendezvous) before continuing 
+
+\subsection{Member Function Documentation}
+\index{Barrier@{Barrier}!First\+Phase@{First\+Phase}}
+\index{First\+Phase@{First\+Phase}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{First\+Phase()}{FirstPhase()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::\+First\+Phase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_barrier_aa9fa4a2ce214b6a052ca9689fe4fa031}{}\label{class_barrier_aa9fa4a2ce214b6a052ca9689fe4fa031}
+author\+: Jake Murphy Smith date\+: 29/10/17 task\+: to create a reusable barrier version\+: 1.\+0
+
+First\+Phase is called to indicate that the thread has reached the first turnstile or rendezvous \index{Barrier@{Barrier}!Second\+Phase@{Second\+Phase}}
+\index{Second\+Phase@{Second\+Phase}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{Second\+Phase()}{SecondPhase()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::\+Second\+Phase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_barrier_ab2776cdecaf46b2c46e6a5ace63f30b4}{}\label{class_barrier_ab2776cdecaf46b2c46e6a5ace63f30b4}
+Second phase is called to indicate that all the threads have executed there code and the rendezvous or turnstile is reset and ready to use again 
+>>>>>>> 33dd8c88ace74443717560760d87d652b15be9f3
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Barrier.\+h\item 
+Barrier.\+cpp\end{DoxyCompactItemize}

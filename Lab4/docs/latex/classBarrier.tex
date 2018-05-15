@@ -1,0 +1,69 @@
+\hypertarget{classBarrier}{}\section{Barrier Class Reference}
+\label{classBarrier}\index{Barrier@{Barrier}}
+
+
+{\ttfamily \#include $<$Barrier.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Wait} ()\hypertarget{classBarrier_a7de2afc6097b37c051d864bdf694c7e0}{}\label{classBarrier_a7de2afc6097b37c051d864bdf694c7e0}
+
+\item 
+void \hyperlink{classBarrier_a48006684f962b312bc0391629e08ca23}{first\+Turnstile} ()
+\item 
+void \hyperlink{classBarrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}{final\+Turnstile} ()
+\item 
+{\bfseries Barrier} (int count)\hypertarget{classBarrier_a68730c862911d37696957056595aa604}{}\label{classBarrier_a68730c862911d37696957056595aa604}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries count}\hypertarget{classBarrier_a261549fd3fc57eb5c4066c8188d25100}{}\label{classBarrier_a261549fd3fc57eb5c4066c8188d25100}
+
+\item 
+int {\bfseries n}\hypertarget{classBarrier_a7da307d8df6bd44ab4e804a94e0c80c2}{}\label{classBarrier_a7da307d8df6bd44ab4e804a94e0c80c2}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classSemaphore}{Semaphore} $>$ {\bfseries mutex}\hypertarget{classBarrier_a256676c1a44ee4971333d2963998b556}{}\label{classBarrier_a256676c1a44ee4971333d2963998b556}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classSemaphore}{Semaphore} $>$ {\bfseries turn\+StileA}\hypertarget{classBarrier_a1dc3b91b9ef0966f3792689ad17f555a}{}\label{classBarrier_a1dc3b91b9ef0966f3792689ad17f555a}
+
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classSemaphore}{Semaphore} $>$ {\bfseries turn\+StileB}\hypertarget{classBarrier_ac982078845654123a6ad2a2dbb2346e2}{}\label{classBarrier_ac982078845654123a6ad2a2dbb2346e2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\+: Jake Murphy Smith \+: 26-\/03-\/2018 \+: \hyperlink{Barrier_8h_source}{Barrier.\+h}  modified by\+: Jake Murphy Smith  modified time\+: 26-\/03-\/2018 \+: G\+NU G\+E\+N\+E\+R\+AL P\+U\+B\+L\+IC L\+I\+C\+E\+N\+SE
+
+Implementation(finally working) of a rendezvous with more than two threads. N threads much reach a certain point in the code (rendezvous), being controlled by a turnstile at two positions, before continuing 
+
+\subsection{Member Function Documentation}
+\index{Barrier@{Barrier}!final\+Turnstile@{final\+Turnstile}}
+\index{final\+Turnstile@{final\+Turnstile}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{final\+Turnstile()}{finalTurnstile()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::final\+Turnstile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBarrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}{}\label{classBarrier_af8ae6b2091ee7388d510fb7cb8ba2a1c}
+final\+Turnstile stands as the final block, and once released indicates that all threads have successfully executed the code, and the first\+Turnstile has been reset \index{Barrier@{Barrier}!first\+Turnstile@{first\+Turnstile}}
+\index{first\+Turnstile@{first\+Turnstile}!Barrier@{Barrier}}
+\subsubsection[{\texorpdfstring{first\+Turnstile()}{firstTurnstile()}}]{\setlength{\rightskip}{0pt plus 5cm}void Barrier\+::first\+Turnstile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBarrier_a48006684f962b312bc0391629e08ca23}{}\label{classBarrier_a48006684f962b312bc0391629e08ca23}
+\+: Jake Murphy Smith \+: 26-\/03-\/2018 \+: Barrier.\+cpp  modified by\+: Jake Murphy Smith  modified time\+: 26-\/03-\/2018 \+: G\+NU G\+E\+N\+E\+R\+AL P\+U\+B\+L\+IC L\+I\+C\+E\+N\+SE
+
+Orginally one block, however logic was getting too annoying to follow partitioned out to smaller chunks
+
+first\+Turnstile stands as the first block that the thread\+Pool will reach and be held at until all have arrived 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Barrier.\+h\item 
+Barrier.\+cpp\end{DoxyCompactItemize}

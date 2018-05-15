@@ -1,0 +1,84 @@
+\hypertarget{signal_8cpp}{}\section{signal.\+cpp File Reference}
+\label{signal_8cpp}\index{signal.\+cpp@{signal.\+cpp}}
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$thread$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{signal_8cpp_a9276980de6446a70b6d2d0b7c68c97fc}{first\+Thread\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ semaphore, int thread\+Id)
+\begin{DoxyCompactList}\small\item\em Task to be done by first thread. \end{DoxyCompactList}\item 
+void \hyperlink{signal_8cpp_a0d18773544f21f3b57dd5d34afa95823}{second\+Thread\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ semaphore, int thread\+Id)
+\begin{DoxyCompactList}\small\item\em Task to be done by second thread. \end{DoxyCompactList}\item 
+void \hyperlink{signal_8cpp_a371ec4eb6a121d277b7ac6c3b8dbad8e}{create\+Threads} (std\+::vector$<$ std\+::thread $>$ \&thread\+Pool, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ semaphore)
+\begin{DoxyCompactList}\small\item\em Initializing vector of threads. \end{DoxyCompactList}\item 
+int \hyperlink{signal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{signal_8cpp_ad3cc29935bf6036442cc5d35579b39cf}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS} = 5
+\begin{DoxyCompactList}\small\item\em Denotes the maximum number of threads that can be made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{signal.\+cpp@{signal.\+cpp}!create\+Threads@{create\+Threads}}
+\index{create\+Threads@{create\+Threads}!signal.\+cpp@{signal.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Threads(std\+::vector$<$ std\+::thread $>$ \&thread\+Pool, std\+::shared\+\_\+ptr$<$ Semaphore $>$ semaphore)}{createThreads(std::vector< std::thread > &threadPool, std::shared_ptr< Semaphore > semaphore)}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Threads (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::thread $>$ \&}]{thread\+Pool, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{semaphore}
+\end{DoxyParamCaption}
+)}\hypertarget{signal_8cpp_a371ec4eb6a121d277b7ac6c3b8dbad8e}{}\label{signal_8cpp_a371ec4eb6a121d277b7ac6c3b8dbad8e}
+
+
+Initializing vector of threads. 
+
+\index{signal.\+cpp@{signal.\+cpp}!first\+Thread\+Task@{first\+Thread\+Task}}
+\index{first\+Thread\+Task@{first\+Thread\+Task}!signal.\+cpp@{signal.\+cpp}}
+\subsubsection[{\texorpdfstring{first\+Thread\+Task(std\+::shared\+\_\+ptr$<$ Semaphore $>$ semaphore, int thread\+Id)}{firstThreadTask(std::shared_ptr< Semaphore > semaphore, int threadId)}}]{\setlength{\rightskip}{0pt plus 5cm}void first\+Thread\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{semaphore, }
+\item[{int}]{thread\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{signal_8cpp_a9276980de6446a70b6d2d0b7c68c97fc}{}\label{signal_8cpp_a9276980de6446a70b6d2d0b7c68c97fc}
+
+
+Task to be done by first thread. 
+
+\index{signal.\+cpp@{signal.\+cpp}!main@{main}}
+\index{main@{main}!signal.\+cpp@{signal.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{signal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{signal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+attempting to show semaphores operating using threads
+
+enhanced for through each thread of thread\+Pool
+
+join to main thread and terminate \index{signal.\+cpp@{signal.\+cpp}!second\+Thread\+Task@{second\+Thread\+Task}}
+\index{second\+Thread\+Task@{second\+Thread\+Task}!signal.\+cpp@{signal.\+cpp}}
+\subsubsection[{\texorpdfstring{second\+Thread\+Task(std\+::shared\+\_\+ptr$<$ Semaphore $>$ semaphore, int thread\+Id)}{secondThreadTask(std::shared_ptr< Semaphore > semaphore, int threadId)}}]{\setlength{\rightskip}{0pt plus 5cm}void second\+Thread\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{semaphore, }
+\item[{int}]{thread\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{signal_8cpp_a0d18773544f21f3b57dd5d34afa95823}{}\label{signal_8cpp_a0d18773544f21f3b57dd5d34afa95823}
+
+
+Task to be done by second thread. 
+
+
+
+\subsection{Variable Documentation}
+\index{signal.\+cpp@{signal.\+cpp}!N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS}!signal.\+cpp@{signal.\+cpp}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS}{NUMBER_OF_THREADS}}]{\setlength{\rightskip}{0pt plus 5cm}const int N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+H\+R\+E\+A\+DS = 5}\hypertarget{signal_8cpp_ad3cc29935bf6036442cc5d35579b39cf}{}\label{signal_8cpp_ad3cc29935bf6036442cc5d35579b39cf}
+
+
+Denotes the maximum number of threads that can be made. 
+

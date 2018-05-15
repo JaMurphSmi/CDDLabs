@@ -1,0 +1,73 @@
+\hypertarget{rendezvous_8cpp}{}\section{rendezvous.\+cpp File Reference}
+\label{rendezvous_8cpp}\index{rendezvous.\+cpp@{rendezvous.\+cpp}}
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$thread$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rendezvous_8cpp_a50d26305af128a68c57892fe393c5855}{first\+Thread\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+Two, int thread\+Id)
+\item 
+void \hyperlink{rendezvous_8cpp_a84786d871ac1e0b3f6f680b2120a4a61}{second\+Thread\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+Two, int thread\+Id)
+\item 
+void \hyperlink{rendezvous_8cpp_a239fb587f5061f136965da108e30cb2a}{create\+Vectors} (std\+::vector$<$ std\+::thread $>$ \&thread\+Pool, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ barrier\+Two)
+\item 
+int \hyperlink{rendezvous_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{rendezvous_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}{S\+I\+ZE} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{rendezvous.\+cpp@{rendezvous.\+cpp}!create\+Vectors@{create\+Vectors}}
+\index{create\+Vectors@{create\+Vectors}!rendezvous.\+cpp@{rendezvous.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Vectors(std\+::vector$<$ std\+::thread $>$ \&thread\+Pool, std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+Two)}{createVectors(std::vector< std::thread > &threadPool, std::shared_ptr< Semaphore > barrierOne, std::shared_ptr< Semaphore > barrierTwo)}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Vectors (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::thread $>$ \&}]{thread\+Pool, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+One, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+Two}
+\end{DoxyParamCaption}
+)}\hypertarget{rendezvous_8cpp_a239fb587f5061f136965da108e30cb2a}{}\label{rendezvous_8cpp_a239fb587f5061f136965da108e30cb2a}
+Initializing a vector with a threads evently adding thread jobs to it
+
+params\+: threads -\/ vector with threads barrier\+One -\/ \hyperlink{class_semaphore}{Semaphore} barrier\+Two -\/ \hyperlink{class_semaphore}{Semaphore} \index{rendezvous.\+cpp@{rendezvous.\+cpp}!first\+Thread\+Task@{first\+Thread\+Task}}
+\index{first\+Thread\+Task@{first\+Thread\+Task}!rendezvous.\+cpp@{rendezvous.\+cpp}}
+\subsubsection[{\texorpdfstring{first\+Thread\+Task(std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+Two, int thread\+Id)}{firstThreadTask(std::shared_ptr< Semaphore > barrierOne, std::shared_ptr< Semaphore > barrierTwo, int threadId)}}]{\setlength{\rightskip}{0pt plus 5cm}void first\+Thread\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+One, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+Two, }
+\item[{int}]{thread\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{rendezvous_8cpp_a50d26305af128a68c57892fe393c5855}{}\label{rendezvous_8cpp_a50d26305af128a68c57892fe393c5855}
+Creating a job for the first thread \index{rendezvous.\+cpp@{rendezvous.\+cpp}!main@{main}}
+\index{main@{main}!rendezvous.\+cpp@{rendezvous.\+cpp}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{rendezvous_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{}\label{rendezvous_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+Main function Two Semaphores for use in rendezvous
+
+creating a vector containing threads
+
+Calling join on threads to terminate\index{rendezvous.\+cpp@{rendezvous.\+cpp}!second\+Thread\+Task@{second\+Thread\+Task}}
+\index{second\+Thread\+Task@{second\+Thread\+Task}!rendezvous.\+cpp@{rendezvous.\+cpp}}
+\subsubsection[{\texorpdfstring{second\+Thread\+Task(std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+One, std\+::shared\+\_\+ptr$<$ Semaphore $>$ barrier\+Two, int thread\+Id)}{secondThreadTask(std::shared_ptr< Semaphore > barrierOne, std::shared_ptr< Semaphore > barrierTwo, int threadId)}}]{\setlength{\rightskip}{0pt plus 5cm}void second\+Thread\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+One, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{barrier\+Two, }
+\item[{int}]{thread\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{rendezvous_8cpp_a84786d871ac1e0b3f6f680b2120a4a61}{}\label{rendezvous_8cpp_a84786d871ac1e0b3f6f680b2120a4a61}
+Creating a job for the Second thread 
+
+\subsection{Variable Documentation}
+\index{rendezvous.\+cpp@{rendezvous.\+cpp}!S\+I\+ZE@{S\+I\+ZE}}
+\index{S\+I\+ZE@{S\+I\+ZE}!rendezvous.\+cpp@{rendezvous.\+cpp}}
+\subsubsection[{\texorpdfstring{S\+I\+ZE}{SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}const int S\+I\+ZE = 10}\hypertarget{rendezvous_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}{}\label{rendezvous_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}
