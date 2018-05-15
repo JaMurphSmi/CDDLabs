@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Author: Jake Murphy Smith
  * Date:   26-03-2018
  * Filename: Semaphore.h
@@ -8,14 +7,6 @@
  * License: GNU GENERAL PUBLIC LICENSE
  */
 
-=======
- * @Author: Jake Murphy Smith
- * @License: GNU GENERAL PUBLIC LICENSE
- */
-
-
-
->>>>>>> 33dd8c88ace74443717560760d87d652b15be9f3
 #include <mutex>
 #include <condition_variable>
 
